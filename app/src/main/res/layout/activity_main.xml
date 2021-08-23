@@ -4,15 +4,199 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:alpha="0.8"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/image1"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@color/purple_500"
+        android:text="@string/result"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- first row buttons-->
+    <Button
+        android:id="@+id/key_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/key_1"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toStartOf="@id/key_2"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/result" />
+
+    <Button
+        android:id="@+id/key_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/key_2"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toStartOf="@id/key_3"
+        app:layout_constraintStart_toEndOf="@id/key_1"
+        app:layout_constraintTop_toBottomOf="@id/result" />
+
+    <Button
+        android:id="@+id/key_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/key_3"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="@id/key_summ"
+        app:layout_constraintStart_toEndOf="@id/key_2"
+        app:layout_constraintTop_toBottomOf="@id/result" />
+
+    <Button
+        android:id="@+id/key_summ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/key_summ"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/key_3"
+        app:layout_constraintTop_toBottomOf="@id/result" />
+
+    <!-- second row buttons-->
+    <Button
+        android:id="@+id/key_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/key_4"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toStartOf="@id/key_5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/key_1" />
+
+    <Button
+        android:id="@+id/key_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/key_5"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toStartOf="@id/key_6"
+        app:layout_constraintStart_toEndOf="@id/key_4"
+        app:layout_constraintTop_toBottomOf="@id/key_2" />
+
+    <Button
+        android:id="@+id/key_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/key_6"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toStartOf="@id/key_minus"
+        app:layout_constraintStart_toEndOf="@id/key_5"
+        app:layout_constraintTop_toBottomOf="@id/key_3" />
+
+    <Button
+        android:id="@+id/key_minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/key_minus"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/key_6"
+        app:layout_constraintTop_toBottomOf="@id/key_summ" />
+
+    <!-- third row buttons-->
+    <Button
+        android:id="@+id/key_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/key_7"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toStartOf="@id/key_8"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/key_4" />
+
+    <Button
+        android:id="@+id/key_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/key_8"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toStartOf="@id/key_9"
+        app:layout_constraintStart_toEndOf="@id/key_7"
+        app:layout_constraintTop_toBottomOf="@id/key_5" />
+
+    <Button
+        android:id="@+id/key_9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/key_9"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toStartOf="@id/key_multi"
+        app:layout_constraintStart_toEndOf="@id/key_8"
+        app:layout_constraintTop_toBottomOf="@id/key_6" />
+
+    <Button
+        android:id="@+id/key_multi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/key_multi"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/key_9"
+        app:layout_constraintTop_toBottomOf="@id/key_minus" />
+
+    <!-- fourth row buttons-->
+    <Button
+        android:id="@+id/key_0"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/key_0"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toStartOf="@id/key_9"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/key_7"
+        app:layout_constraintTop_toBottomOf="@id/key_7" />
+
+    <Button
+        android:id="@+id/key_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/key_dot"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toStartOf="@id/key_9"
+        app:layout_constraintStart_toEndOf="@id/key_9"
+        app:layout_constraintTop_toBottomOf="@id/key_9" />
+
+    <Button
+        android:id="@+id/key_split"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/key_split"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="@id/key_multi"
+        app:layout_constraintStart_toEndOf="@id/key_dot"
+        app:layout_constraintTop_toBottomOf="@id/key_multi" />
+
+    <!-- fifth row buttons-->
+    <Button
+        android:id="@+id/key_equals"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/key_equals"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="@id/key_split"
+        app:layout_constraintStart_toStartOf="@id/key_0"
+        app:layout_constraintTop_toBottomOf="@id/key_0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
