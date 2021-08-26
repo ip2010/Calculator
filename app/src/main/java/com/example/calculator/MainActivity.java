@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void buidCount(String key) {
         valueString = valueString + key;
         result.setText(valueString);
-        //log(key);
     }
 
     private void addOperation(String key) {
