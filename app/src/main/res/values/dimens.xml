@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="btnsize">30dp</dimen>
+    <dimen name="margin_min">1dp</dimen>
+    <dimen name="layout_width_value">0dp</dimen>
+    <dimen name="stroke_Width">1dp</dimen>
+    <dimen name="corner_Radius">1dp</dimen>
+    <dimen name="inset_Dp">1dp</dimen>
 </resources>

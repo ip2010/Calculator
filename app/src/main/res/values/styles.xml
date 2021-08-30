@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CalcButton">
+        <item name="android:textSize">@dimen/btnsize</item>
+        <item name="backgroundTint">#E4E3E3</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="strokeWidth">@dimen/stroke_Width</item>
+        <item name="cornerRadius">@dimen/corner_Radius</item>
+        <item name="android:inset">@dimen/inset_Dp</item>
+    </style>
+</resources>
