@@ -18,4 +18,5 @@
     <string name="key_split">/</string>
     <string name="key_equals">=</string>
     <string name="todo">TODO</string>
+    <string name="store"> </string>
 </resources>
